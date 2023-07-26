@@ -1,6 +1,8 @@
 import { Container, Card, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+	const navigate = useNavigate();
 	return (
 		<div className=' py-5'>
 			<Container className='d-flex justify-content-center'>
@@ -18,7 +20,7 @@ const Hero = () => {
 					<div className='d-flex'>
 						<Button
 							variant='primary'
-							href='/login'
+							onClick={() => navigate("/login")}
 							className='me-3'
 						>
 							Sign In
